@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHRIMPS | 1616 Pixel-Art NFTs</title>
+<title>SHRIMPS</title>
 
-<meta name="description" content="SHRIMPS is a collection of 1616 pixel-art NFTs. Join the crew and secure your whitelist spot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,249 +24,341 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:linear-gradient(180deg,#081B33,#0D2D57);
+font-family:'Press Start 2P',cursive;
 color:white;
 overflow-x:hidden;
+background:
+linear-gradient(
+180deg,
+#9fd7ea 0%,
+#9fd7ea 25%,
+#5db4e6 25%,
+#5db4e6 55%,
+#2980b9 55%,
+#0f4c81 100%
+);
+}
+
+/* PIXEL OCEAN */
+
+.pixel-ocean{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:120px;
+background:
+repeating-linear-gradient(
+90deg,
+#0d47a1 0px,
+#0d47a1 20px,
+#1565c0 20px,
+#1565c0 40px
+);
+z-index:0;
+opacity:.8;
 }
 
 /* BUBBLES */
 
 .bubble{
 position:fixed;
-bottom:-100px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
+bottom:-50px;
+border:3px solid rgba(255,255,255,.4);
+background:transparent;
+z-index:1;
 animation:float linear infinite;
-pointer-events:none;
-z-index:0;
 }
 
 .b1{
-width:40px;
-height:40px;
 left:10%;
+width:20px;
+height:20px;
 animation-duration:12s;
 }
 
 .b2{
-width:25px;
-height:25px;
 left:30%;
+width:30px;
+height:30px;
 animation-duration:15s;
 }
 
 .b3{
-width:50px;
-height:50px;
 left:55%;
+width:25px;
+height:25px;
 animation-duration:18s;
 }
 
 .b4{
-width:20px;
-height:20px;
-left:75%;
+left:80%;
+width:15px;
+height:15px;
 animation-duration:10s;
 }
 
-.b5{
-width:35px;
-height:35px;
-left:90%;
-animation-duration:14s;
-}
-
 @keyframes float{
+
 0%{
 transform:translateY(0);
 }
+
 100%{
 transform:translateY(-120vh);
 }
+
 }
 
 .container{
 position:relative;
 z-index:2;
 width:90%;
-max-width:1200px;
+max-width:1100px;
 margin:auto;
 }
 
+/* HERO */
+
 .hero{
-padding:40px 0 100px;
 text-align:center;
+padding:40px 0 80px;
 }
 
 .banner{
 width:100%;
-border-radius:20px;
-border:3px solid #1f4f8d;
-box-shadow:0 0 30px rgba(0,0,0,.4);
+border:4px solid #000;
+image-rendering:pixelated;
 }
 
 .logo{
-font-size:72px;
-font-weight:900;
-color:#FFD54A;
-margin-top:30px;
-text-shadow:0 0 15px rgba(255,213,74,.3);
+font-size:52px;
+line-height:1.4;
+margin-top:35px;
+color:#ffe66d;
+
+text-shadow:
+4px 4px 0 #000,
+8px 8px 0 #163b70;
 }
 
 .subtitle{
-font-size:22px;
-margin-top:15px;
-opacity:.9;
+font-size:12px;
+margin-top:25px;
+line-height:2;
+color:#ffffff;
 }
 
 .hero-text{
+margin:30px auto;
 max-width:700px;
-margin:25px auto;
-font-size:18px;
-opacity:.8;
+font-size:11px;
+line-height:2.2;
+color:#e8f4ff;
 }
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
-padding:16px 35px;
-background:#FFD54A;
-color:#081B33;
-font-weight:bold;
+padding:18px 24px;
+background:#ffd54a;
+color:#000;
 text-decoration:none;
-border-radius:12px;
+border:4px solid #000;
 margin-top:20px;
-transition:.3s;
+
+box-shadow:
+6px 6px 0 #000;
+
+transition:.2s;
 }
 
 .btn:hover{
-transform:translateY(-3px) scale(1.03);
+transform:translate(-2px,-2px);
+box-shadow:
+8px 8px 0 #000;
 }
 
-.section{
-padding:90px 0;
+/* SECTION */
+
+section{
+padding:80px 0;
 }
 
 .section-title{
-font-size:42px;
+font-size:22px;
 text-align:center;
-color:#FFD54A;
 margin-bottom:40px;
+color:#ffe66d;
+text-shadow:3px 3px 0 #000;
 }
 
+/* ABOUT */
+
 .about{
-max-width:800px;
-margin:auto;
-text-align:center;
-font-size:18px;
-line-height:1.8;
+background:#0d2d56;
+border:4px solid #000;
+padding:30px;
+line-height:2.2;
+font-size:10px;
 }
+
+/* SUPPLY */
 
 .stats{
 display:flex;
 justify-content:center;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .card{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(8px);
-padding:35px;
-border-radius:20px;
+background:#0d2d56;
+border:4px solid #000;
+padding:30px;
 width:300px;
 text-align:center;
-border:1px solid rgba(255,255,255,.08);
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.card h3{
+font-size:40px;
+color:#ffe66d;
+margin-bottom:15px;
 }
 
-.number{
-font-size:60px;
-font-weight:900;
-color:#FFD54A;
+.card p{
+font-size:10px;
+line-height:2;
 }
 
-.label{
-margin-top:10px;
-font-size:18px;
-}
-
-.steps{
-max-width:700px;
-margin:auto;
-}
+/* WL STEPS */
 
 .step{
-background:rgba(255,255,255,.05);
+background:#0d2d56;
+border:4px solid #000;
 padding:20px;
 margin-bottom:15px;
-border-radius:12px;
-border:1px solid rgba(255,255,255,.08);
+font-size:10px;
+line-height:2;
 }
+
+/* WL BOX */
 
 .wl-box{
-max-width:700px;
-margin:auto;
+background:#0d2d56;
+border:4px solid #000;
 padding:40px;
-background:rgba(255,255,255,.05);
-border-radius:20px;
 text-align:center;
-border:1px solid rgba(255,255,255,.08);
+font-size:10px;
+line-height:2;
 }
 
-.socials{
+/* FAQ */
+
+.faq-item{
+background:#0d2d56;
+border:4px solid #000;
+padding:20px;
+margin-bottom:15px;
+}
+
+.faq-item h4{
+font-size:12px;
+margin-bottom:15px;
+color:#ffe66d;
+}
+
+.faq-item p{
+font-size:10px;
+line-height:2;
+}
+
+/* FOOTER */
+
+.footer{
+background:#000;
+padding:80px 20px;
+text-align:center;
+}
+
+.footer-logo{
+font-size:36px;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.footer-logo span{
+color:#ff6b35;
+}
+
+.copyright{
+font-size:12px;
+color:#888;
+margin-bottom:40px;
+line-height:2;
+}
+
+.footer-menu{
 display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
-margin-top:30px;
+margin-bottom:40px;
 }
 
-.social-btn{
-display:inline-block;
-padding:15px 30px;
-background:#102b55;
+.footer-menu a{
 color:white;
 text-decoration:none;
-border-radius:12px;
-transition:.3s;
+font-size:10px;
 }
 
-.social-btn:hover{
-transform:translateY(-3px);
+.footer-menu a:hover{
+color:#ff6b35;
 }
 
-footer{
-padding:40px 20px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.1);
-opacity:.8;
+.footer-social{
+display:flex;
+justify-content:center;
+gap:20px;
 }
+
+.footer-social a{
+width:70px;
+height:70px;
+background:white;
+color:black;
+text-decoration:none;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border:4px solid black;
+
+font-size:20px;
+
+box-shadow:6px 6px 0 #333;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
 .logo{
-font-size:48px;
-}
-
-.subtitle{
-font-size:18px;
+font-size:30px;
 }
 
 .section-title{
-font-size:30px;
+font-size:16px;
 }
 
 .card{
 width:100%;
 }
 
-.hero-text{
-font-size:16px;
+.footer-logo{
+font-size:24px;
 }
 
 }
@@ -276,25 +371,27 @@ font-size:16px;
 <div class="bubble b2"></div>
 <div class="bubble b3"></div>
 <div class="bubble b4"></div>
-<div class="bubble b5"></div>
 
-<!-- HERO -->
+<div class="pixel-ocean"></div>
 
 <section class="hero">
+
 <div class="container">
 
-<img src="banner.png" alt="SHRIMPS Banner" class="banner">
+<img src="banner.png" class="banner" alt="SHRIMPS">
 
-<h1 class="logo">SHRIMPS</h1>
+<h1 class="logo">
+SHRIMPS
+</h1>
 
 <p class="subtitle">
-1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN
+PRESS START TO JOIN THE OCEAN
 </p>
 
 <p class="hero-text">
-A pixel-art NFT collection built for collectors,
-traders and community members who believe
-small communities can make big waves.
+1616 PIXEL SHRIMPS.
+808 WL ALLOCATIONS.
+ONE OCEAN.
 </p>
 
 <a href="#wl" class="btn">
@@ -302,11 +399,11 @@ APPLY FOR WL
 </a>
 
 </div>
+
 </section>
 
-<!-- ABOUT -->
+<section>
 
-<section class="section">
 <div class="container">
 
 <h2 class="section-title">
@@ -315,24 +412,22 @@ ABOUT SHRIMPS
 
 <div class="about">
 
-<p>
-SHRIMPS is a collection of 1616 unique pixel-art NFTs swimming across the blockchain.
-</p>
+SHRIMPS IS A COLLECTION OF 1616 UNIQUE
+PIXEL-ART NFTS SWIMMING ACROSS THE BLOCKCHAIN.
 
-<br>
+<br><br>
 
-<p>
-808 whitelist allocations are reserved for the earliest supporters who help build the ocean from day one.
-</p>
+808 WL ALLOCATIONS ARE RESERVED FOR THE
+EARLIEST SUPPORTERS WHO HELP BUILD THE OCEAN.
 
 </div>
 
 </div>
+
 </section>
 
-<!-- SUPPLY -->
+<section>
 
-<section class="section">
 <div class="container">
 
 <h2 class="section-title">
@@ -342,75 +437,56 @@ SUPPLY
 <div class="stats">
 
 <div class="card">
-<div class="number">1616</div>
-<div class="label">Total Supply</div>
+<h3>1616</h3>
+<p>TOTAL SUPPLY</p>
 </div>
 
 <div class="card">
-<div class="number">808</div>
-<div class="label">Whitelist Allocation</div>
+<h3>808</h3>
+<p>WL ALLOCATION</p>
 </div>
 
 <div class="card">
-<div class="number">808</div>
-<div class="label">Public Allocation</div>
+<h3>808</h3>
+<p>PUBLIC</p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
-<!-- HOW TO GET WL -->
+<section>
 
-<section class="section">
 <div class="container">
 
 <h2 class="section-title">
 HOW TO GET WL
 </h2>
 
-<div class="steps">
-
-<div class="step">
-🦐 Follow SHRIMPS on X
-</div>
-
-<div class="step">
-🌊 Engage with SHRIMPS content
-</div>
-
-<div class="step">
-🚀 Submit your whitelist application
-</div>
-
-<div class="step">
-🏆 Stay active and help grow the ocean
-</div>
+<div class="step">FOLLOW SHRIMPS ON X</div>
+<div class="step">ENGAGE WITH OUR CONTENT</div>
+<div class="step">SUBMIT YOUR APPLICATION</div>
+<div class="step">STAY ACTIVE IN THE COMMUNITY</div>
 
 </div>
 
-</div>
 </section>
 
-<!-- WL -->
+<section id="wl">
 
-<section class="section" id="wl">
 <div class="container">
 
 <h2 class="section-title">
-WHITELIST APPLICATION
+WHITELIST
 </h2>
 
 <div class="wl-box">
 
-<p>
-Ready to join the crew?
-Whitelist applications are opening soon.
-Become one of the first members of the SHRIMPS ocean.
-</p>
+READY TO JOIN THE CREW?
 
-<br>
+<br><br>
 
 <a
 class="btn"
@@ -422,34 +498,44 @@ FOLLOW ON X
 </div>
 
 </div>
+
 </section>
 
-<!-- COMMUNITY -->
+<footer class="footer">
 
-<section class="section">
-<div class="container">
+<div class="footer-logo">
+THE <span>SHRIMPS</span>
+</div>
 
-<h2 class="section-title">
-COMMUNITY
-</h2>
+<div class="copyright">
+© 2026 SHRIMPS. ALL RIGHTS RESERVED.
+</div>
 
-<div class="socials">
+<div class="footer-menu">
 
-<a
-class="social-btn"
-href="https://x.com/theshrimpsnft"
-target="_blank">
-X / TWITTER
+<a href="#wl">WHITELIST</a>
+
+•
+
+<a href="#">ART</a>
+
+•
+
+<a href="#">FAQ</a>
+
+</div>
+
+<div class="footer-social">
+
+<a href="https://x.com/theshrimpsnft" target="_blank">
+X
+</a>
+
+<a href="#">
+D
 </a>
 
 </div>
-
-</div>
-</section>
-
-<footer>
-
-🦐 1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN 🌊
 
 </footer>
 
