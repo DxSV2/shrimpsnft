@@ -1,1 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SHRIMPS | 1616 Pixel-Art NFTs</title>
+
+<meta name="description" content="SHRIMPS is a collection of 1616 pixel-art NFTs. Join the crew and secure your whitelist spot.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg,#081B33,#0D2D57);
+color:white;
+overflow-x:hidden;
+}
+
+/* BUBBLES */
+
+.bubble{
+position:fixed;
+bottom:-100px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+animation:float linear infinite;
+pointer-events:none;
+z-index:0;
+}
+
+.b1{
+width:40px;
+height:40px;
+left:10%;
+animation-duration:12s;
+}
+
+.b2{
+width:25px;
+height:25px;
+left:30%;
+animation-duration:15s;
+}
+
+.b3{
+width:50px;
+height:50px;
+left:55%;
+animation-duration:18s;
+}
+
+.b4{
+width:20px;
+height:20px;
+left:75%;
+animation-duration:10s;
+}
+
+.b5{
+width:35px;
+height:35px;
+left:90%;
+animation-duration:14s;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+.container{
+position:relative;
+z-index:2;
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.hero{
+padding:40px 0 100px;
+text-align:center;
+}
+
+.banner{
+width:100%;
+border-radius:20px;
+border:3px solid #1f4f8d;
+box-shadow:0 0 30px rgba(0,0,0,.4);
+}
+
+.logo{
+font-size:72px;
+font-weight:900;
+color:#FFD54A;
+margin-top:30px;
+text-shadow:0 0 15px rgba(255,213,74,.3);
+}
+
+.subtitle{
+font-size:22px;
+margin-top:15px;
+opacity:.9;
+}
+
+.hero-text{
+max-width:700px;
+margin:25px auto;
+font-size:18px;
+opacity:.8;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#FFD54A;
+color:#081B33;
+font-weight:bold;
+text-decoration:none;
+border-radius:12px;
+margin-top:20px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px) scale(1.03);
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+color:#FFD54A;
+margin-bottom:40px;
+}
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(8px);
+padding:35px;
+border-radius:20px;
+width:300px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.number{
+font-size:60px;
+font-weight:900;
+color:#FFD54A;
+}
+
+.label{
+margin-top:10px;
+font-size:18px;
+}
+
+.steps{
+max-width:700px;
+margin:auto;
+}
+
+.step{
+background:rgba(255,255,255,.05);
+padding:20px;
+margin-bottom:15px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.wl-box{
+max-width:700px;
+margin:auto;
+padding:40px;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.social-btn{
+display:inline-block;
+padding:15px 30px;
+background:#102b55;
+color:white;
+text-decoration:none;
+border-radius:12px;
+transition:.3s;
+}
+
+.social-btn:hover{
+transform:translateY(-3px);
+}
+
+footer{
+padding:40px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.1);
+opacity:.8;
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:48px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.card{
+width:100%;
+}
+
+.hero-text{
+font-size:16px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
+<div class="bubble b5"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="container">
+
+<img src="banner.png" alt="SHRIMPS Banner" class="banner">
+
+<h1 class="logo">SHRIMPS</h1>
+
+<p class="subtitle">
+1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN
+</p>
+
+<p class="hero-text">
+A pixel-art NFT collection built for collectors,
+traders and community members who believe
+small communities can make big waves.
+</p>
+
+<a href="#wl" class="btn">
+APPLY FOR WL
+</a>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+ABOUT SHRIMPS
+</h2>
+
+<div class="about">
+
+<p>
+SHRIMPS is a collection of 1616 unique pixel-art NFTs swimming across the blockchain.
+</p>
+
+<br>
+
+<p>
+808 whitelist allocations are reserved for the earliest supporters who help build the ocean from day one.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<!-- SUPPLY -->
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+SUPPLY
+</h2>
+
+<div class="stats">
+
+<div class="card">
+<div class="number">1616</div>
+<div class="label">Total Supply</div>
+</div>
+
+<div class="card">
+<div class="number">808</div>
+<div class="label">Whitelist Allocation</div>
+</div>
+
+<div class="card">
+<div class="number">808</div>
+<div class="label">Public Allocation</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- HOW TO GET WL -->
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+HOW TO GET WL
+</h2>
+
+<div class="steps">
+
+<div class="step">
+🦐 Follow SHRIMPS on X
+</div>
+
+<div class="step">
+🌊 Engage with SHRIMPS content
+</div>
+
+<div class="step">
+🚀 Submit your whitelist application
+</div>
+
+<div class="step">
+🏆 Stay active and help grow the ocean
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- WL -->
+
+<section class="section" id="wl">
+<div class="container">
+
+<h2 class="section-title">
+WHITELIST APPLICATION
+</h2>
+
+<div class="wl-box">
+
+<p>
+Ready to join the crew?
+Whitelist applications are opening soon.
+Become one of the first members of the SHRIMPS ocean.
+</p>
+
+<br>
+
+<a
+class="btn"
+href="https://x.com/theshrimpsnft"
+target="_blank">
+FOLLOW ON X
+</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- COMMUNITY -->
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title">
+COMMUNITY
+</h2>
+
+<div class="socials">
+
+<a
+class="social-btn"
+href="https://x.com/theshrimpsnft"
+target="_blank">
+X / TWITTER
+</a>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+
+🦐 1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN 🌊
+
+</footer>
+
+</body>
+</html>
