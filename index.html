@@ -28,8 +28,8 @@ font-family:Arial,sans-serif;
 background:
 linear-gradient(
 180deg,
-#08111f 0%,
-#0c1d35 50%,
+#07111f 0%,
+#0b1d35 50%,
 #081B33 100%
 );
 color:#fff;
@@ -38,7 +38,7 @@ overflow-x:hidden;
 position:relative;
 }
 
-/* GRID EFFECT */
+/* GRID */
 
 body::before{
 content:"";
@@ -46,13 +46,38 @@ position:fixed;
 inset:0;
 
 background:
-linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+linear-gradient(rgba(255,255,255,.08) 2px, transparent 2px),
+linear-gradient(90deg, rgba(255,255,255,.08) 2px, transparent 2px);
 
-background-size:40px 40px;
+background-size:55px 55px;
 
 pointer-events:none;
 z-index:-2;
+}
+
+/* OCEAN GLOW */
+
+body::after{
+content:"";
+position:fixed;
+
+width:900px;
+height:900px;
+
+background:
+radial-gradient(
+circle,
+rgba(0,120,255,.25),
+transparent 70%
+);
+
+top:-250px;
+left:50%;
+
+transform:translateX(-50%);
+
+pointer-events:none;
+z-index:-1;
 }
 
 /* BUBBLES */
@@ -60,11 +85,11 @@ z-index:-2;
 .bubble{
 position:fixed;
 bottom:-100px;
-border:2px solid rgba(255,255,255,.12);
+border:2px solid rgba(255,255,255,.15);
 border-radius:50%;
 pointer-events:none;
-z-index:-1;
 animation:float linear infinite;
+z-index:-1;
 }
 
 .b1{
@@ -75,24 +100,52 @@ animation-duration:10s;
 }
 
 .b2{
-width:40px;
-height:40px;
-left:30%;
-animation-duration:15s;
+width:35px;
+height:35px;
+left:25%;
+animation-duration:14s;
 }
 
 .b3{
 width:25px;
 height:25px;
-left:55%;
+left:40%;
 animation-duration:12s;
 }
 
 .b4{
+width:45px;
+height:45px;
+left:55%;
+animation-duration:18s;
+}
+
+.b5{
+width:18px;
+height:18px;
+left:65%;
+animation-duration:11s;
+}
+
+.b6{
+width:30px;
+height:30px;
+left:75%;
+animation-duration:16s;
+}
+
+.b7{
 width:50px;
 height:50px;
-left:80%;
-animation-duration:18s;
+left:85%;
+animation-duration:20s;
+}
+
+.b8{
+width:22px;
+height:22px;
+left:95%;
+animation-duration:13s;
 }
 
 @keyframes float{
@@ -131,7 +184,7 @@ box-shadow:0 0 30px rgba(23,59,108,.4);
 .logo{
 font-family:'Press Start 2P',cursive;
 font-size:3rem;
-line-height:1.4;
+line-height:1.5;
 color:#FFD54A;
 margin-top:30px;
 
@@ -140,9 +193,9 @@ text-shadow:
 }
 
 .tagline{
-font-size:1.15rem;
+font-size:1.1rem;
 margin-top:15px;
-color:#d8e8ff;
+color:#d7e7ff;
 }
 
 .btn{
@@ -173,7 +226,7 @@ text-align:center;
 
 .section h2{
 font-family:'Press Start 2P',cursive;
-font-size:1.8rem;
+font-size:1.6rem;
 line-height:1.6;
 margin-bottom:30px;
 color:#FFD54A;
@@ -183,10 +236,10 @@ text-shadow:
 }
 
 .section p{
-color:#d8e8ff;
+color:#d7e7ff;
 }
 
-/* SUPPLY */
+/* CARDS */
 
 .stats{
 display:flex;
@@ -202,22 +255,19 @@ padding:30px;
 border-radius:16px;
 width:260px;
 border:2px solid #173B6C;
-
-box-shadow:
-0 0 20px rgba(255,213,74,.08);
 }
 
 .card h3{
 font-family:'Press Start 2P',cursive;
-font-size:2rem;
+font-size:1.8rem;
 margin-bottom:15px;
 color:#FFD54A;
 }
 
-/* WL STEPS */
+/* STEPS */
 
 .steps{
-max-width:600px;
+max-width:650px;
 margin:auto;
 text-align:left;
 }
@@ -258,27 +308,26 @@ border-radius:12px;
 text-decoration:none;
 color:white;
 border:2px solid #173B6C;
-transition:.3s;
-}
-
-.socials a:hover{
-transform:translateY(-3px);
 }
 
 /* FOOTER */
 
-.footer-pro{
-background:#050505;
+.footer{
+background:#000;
 padding:90px 20px;
 text-align:center;
 margin-top:80px;
 }
 
 .footer-logo{
-font-size:48px;
-font-weight:900;
-font-style:italic;
-margin-bottom:20px;
+font-family:'Press Start 2P',cursive;
+font-size:28px;
+line-height:1.8;
+margin-bottom:25px;
+color:white;
+
+text-shadow:
+4px 4px 0 #000;
 }
 
 .footer-logo span{
@@ -309,6 +358,8 @@ text-decoration:none;
 color:#FFD54A;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 .logo{
@@ -316,15 +367,15 @@ font-size:2rem;
 }
 
 .section h2{
-font-size:1.2rem;
-}
-
-.footer-logo{
-font-size:32px;
+font-size:1.1rem;
 }
 
 .card{
 width:100%;
+}
+
+.footer-logo{
+font-size:20px;
 }
 
 }
@@ -337,14 +388,16 @@ width:100%;
 <div class="bubble b2"></div>
 <div class="bubble b3"></div>
 <div class="bubble b4"></div>
+<div class="bubble b5"></div>
+<div class="bubble b6"></div>
+<div class="bubble b7"></div>
+<div class="bubble b8"></div>
 
 <section class="hero">
 
 <img src="banner.png" alt="SHRIMPS">
 
-<div class="logo">
-SHRIMPS
-</div>
+<div class="logo">SHRIMPS</div>
 
 <p class="tagline">
 1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN
@@ -400,11 +453,8 @@ small communities can make big waves.
 <div class="steps">
 
 <p>🦐 Follow SHRIMPS on X</p>
-
 <p>🌊 Engage with our content</p>
-
 <p>🚀 Submit your whitelist application</p>
-
 <p>🏆 Stay active in the community</p>
 
 </div>
@@ -421,8 +471,6 @@ small communities can make big waves.
 Ready to join the crew?
 Apply now and secure your chance to become part of the SHRIMPS community.
 </p>
-
-<br>
 
 <a
 class="btn"
@@ -453,10 +501,11 @@ Discord
 
 </section>
 
-<footer class="footer-pro">
+<footer class="footer">
 
 <div class="footer-logo">
-THE <span>SHRIMPS</span>
+THE<br>
+<span>SHRIMPS</span>
 </div>
 
 <div class="footer-copy">
