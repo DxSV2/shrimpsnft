@@ -6,7 +6,13 @@
 
 <title>SHRIMPS</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -18,11 +24,96 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, sans-serif;
-background:#081B33;
+font-family:Arial,sans-serif;
+background:
+linear-gradient(
+180deg,
+#08111f 0%,
+#0c1d35 50%,
+#081B33 100%
+);
 color:#fff;
-line-height:1.6;
+line-height:1.7;
+overflow-x:hidden;
+position:relative;
 }
+
+/* GRID EFFECT */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+pointer-events:none;
+z-index:-2;
+}
+
+/* BUBBLES */
+
+.bubble{
+position:fixed;
+bottom:-100px;
+border:2px solid rgba(255,255,255,.12);
+border-radius:50%;
+pointer-events:none;
+z-index:-1;
+animation:float linear infinite;
+}
+
+.b1{
+width:20px;
+height:20px;
+left:10%;
+animation-duration:10s;
+}
+
+.b2{
+width:40px;
+height:40px;
+left:30%;
+animation-duration:15s;
+}
+
+.b3{
+width:25px;
+height:25px;
+left:55%;
+animation-duration:12s;
+}
+
+.b4{
+width:50px;
+height:50px;
+left:80%;
+animation-duration:18s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* HERO */
 
 .hero{
 padding:40px 20px;
@@ -32,51 +123,70 @@ text-align:center;
 .hero img{
 width:100%;
 max-width:1200px;
-border-radius:16px;
+border-radius:18px;
 border:3px solid #173B6C;
+box-shadow:0 0 30px rgba(23,59,108,.4);
 }
 
 .logo{
+font-family:'Press Start 2P',cursive;
 font-size:3rem;
-font-weight:900;
+line-height:1.4;
 color:#FFD54A;
-margin-top:25px;
+margin-top:30px;
+
+text-shadow:
+4px 4px 0 #000;
 }
 
 .tagline{
-font-size:1.1rem;
-margin-top:10px;
-opacity:.9;
+font-size:1.15rem;
+margin-top:15px;
+color:#d8e8ff;
 }
 
 .btn{
 display:inline-block;
 margin-top:25px;
-padding:15px 30px;
+padding:15px 35px;
 background:#FFD54A;
 color:#081B33;
 font-weight:bold;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
 transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(255,213,74,.5);
 }
 
+/* SECTION */
+
 .section{
-padding:70px 20px;
+padding:80px 20px;
 max-width:1000px;
 margin:auto;
 text-align:center;
 }
 
 .section h2{
-font-size:2rem;
-margin-bottom:20px;
+font-family:'Press Start 2P',cursive;
+font-size:1.8rem;
+line-height:1.6;
+margin-bottom:30px;
 color:#FFD54A;
+
+text-shadow:
+3px 3px 0 #000;
 }
+
+.section p{
+color:#d8e8ff;
+}
+
+/* SUPPLY */
 
 .stats{
 display:flex;
@@ -88,36 +198,50 @@ margin-top:30px;
 
 .card{
 background:#102A4D;
-padding:25px;
-border-radius:14px;
-width:220px;
+padding:30px;
+border-radius:16px;
+width:260px;
 border:2px solid #173B6C;
+
+box-shadow:
+0 0 20px rgba(255,213,74,.08);
 }
 
 .card h3{
-font-size:2.5rem;
+font-family:'Press Start 2P',cursive;
+font-size:2rem;
+margin-bottom:15px;
 color:#FFD54A;
 }
 
+/* WL STEPS */
+
 .steps{
-max-width:500px;
+max-width:600px;
 margin:auto;
 text-align:left;
 }
 
 .steps p{
+background:#102A4D;
+padding:18px;
+border-radius:12px;
 margin:15px 0;
-font-size:1.1rem;
+border:1px solid #173B6C;
 }
+
+/* WL BOX */
 
 .wl-box{
 background:#102A4D;
-padding:30px;
-border-radius:14px;
+padding:35px;
+border-radius:16px;
 border:2px solid #173B6C;
-max-width:600px;
+max-width:650px;
 margin:auto;
 }
+
+/* SOCIAL */
 
 .socials{
 display:flex;
@@ -129,28 +253,98 @@ margin-top:25px;
 
 .socials a{
 background:#102A4D;
-padding:12px 20px;
-border-radius:10px;
+padding:14px 22px;
+border-radius:12px;
 text-decoration:none;
 color:white;
 border:2px solid #173B6C;
+transition:.3s;
 }
 
-footer{
-padding:40px 20px;
-text-align:center;
-opacity:.7;
-font-size:.9rem;
+.socials a:hover{
+transform:translateY(-3px);
 }
+
+/* FOOTER */
+
+.footer-pro{
+background:#050505;
+padding:90px 20px;
+text-align:center;
+margin-top:80px;
+}
+
+.footer-logo{
+font-size:48px;
+font-weight:900;
+font-style:italic;
+margin-bottom:20px;
+}
+
+.footer-logo span{
+color:#FFD54A;
+}
+
+.footer-copy{
+color:#888;
+font-size:14px;
+margin-bottom:40px;
+letter-spacing:2px;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+font-weight:bold;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+color:#FFD54A;
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:2rem;
+}
+
+.section h2{
+font-size:1.2rem;
+}
+
+.footer-logo{
+font-size:32px;
+}
+
+.card{
+width:100%;
+}
+
+}
+
 </style>
 </head>
 <body>
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
 
 <section class="hero">
 
 <img src="banner.png" alt="SHRIMPS">
 
-<div class="logo">SHRIMPS</div>
+<div class="logo">
+SHRIMPS
+</div>
 
 <p class="tagline">
 1616 SHRIMPS • 808 WL ALLOCATIONS • ONE OCEAN
@@ -205,13 +399,13 @@ small communities can make big waves.
 
 <div class="steps">
 
-<p>1. Follow SHRIMPS on X</p>
+<p>🦐 Follow SHRIMPS on X</p>
 
-<p>2. Engage with our content</p>
+<p>🌊 Engage with our content</p>
 
-<p>3. Submit your whitelist application</p>
+<p>🚀 Submit your whitelist application</p>
 
-<p>4. Stay active in the community</p>
+<p>🏆 Stay active in the community</p>
 
 </div>
 
@@ -225,12 +419,16 @@ small communities can make big waves.
 
 <p>
 Ready to join the crew?
-Apply now and secure your chance to become
-part of the SHRIMPS community.
+Apply now and secure your chance to become part of the SHRIMPS community.
 </p>
 
-<a class="btn" href="#">
-SUBMIT APPLICATION
+<br>
+
+<a
+class="btn"
+href="https://x.com/theshrimpsnft"
+target="_blank">
+FOLLOW ON X
 </a>
 
 </div>
@@ -243,17 +441,41 @@ SUBMIT APPLICATION
 
 <div class="socials">
 
-<a href="#">Twitter / X</a>
+<a href="https://x.com/theshrimpsnft" target="_blank">
+Twitter / X
+</a>
 
-<a href="#">Discord</a>
+<a href="#">
+Discord
+</a>
 
 </div>
 
 </section>
 
-<footer>
+<footer class="footer-pro">
 
-SMALL CREATURES. BIG WAVES.
+<div class="footer-logo">
+THE <span>SHRIMPS</span>
+</div>
+
+<div class="footer-copy">
+© 2026 SHRIMPS. ALL RIGHTS RESERVED.
+</div>
+
+<div class="footer-links">
+
+<a href="#wl">WHITELIST</a>
+
+•
+
+<a href="#">ABOUT</a>
+
+•
+
+<a href="#">FAQ</a>
+
+</div>
 
 </footer>
 
